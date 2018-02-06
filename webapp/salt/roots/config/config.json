@@ -9,10 +9,10 @@
 			"Database": "gowebapp"
 		},
 		"MySQL": {
-			"Username": "root",
-			"Password": "8A991c2D",
-			"Name": "gowebapp",
-			"Hostname": "127.0.0.1",
+			"Username": "webapp",
+			"Password": "webapp",
+			"Name": "webapp",
+			"Hostname": "192.168.51.1",
 			"Port": 3306,
 			"Parameter": "?parseTime=true"
 		}
