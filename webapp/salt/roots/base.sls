@@ -32,4 +32,4 @@ download basic Go MVC Webapp:
 
 Build and run GoWebApp:
   cmd.run:
-    - name: cd /go/src/github.com/josephspurrier/gowebapp ; go build gowebapp.go ; go run gowebapp.go
+    - name: cd ~/go/src/github.com/josephspurrier/gowebapp ; go build gowebapp.go ; go run gowebapp.go
