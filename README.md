@@ -10,13 +10,15 @@ $ vagrant plugin install vagrant-salt
 ~~~
 
 
-## To provision the "Database" , clone this repo and run: 
+## Provision the Database: 
+Clone this repo and run: 
 ~~~
 $ cd onefootball-devops/database ; vagrant up
 ~~~
 
 
-## To provision the "Webapp" , clone this repo and run: 
+## Provision the Webapp:
+Clone this repo and run: (you should have database VM running first)
 ~~~
 $ cd onefootball-devops/webapp ; vagrant up 
 ~~~
