@@ -2,7 +2,6 @@ install Git:
   pkg.installed:
     - names: 
       - git
-      - supervisor
 
 install Go:
   cmd.run:
@@ -36,14 +35,14 @@ Build and run GoWebApp:
     - name: export PATH="$PATH:/usr/local/go/bin" ; cd ~/go/src/github.com/josephspurrier/gowebapp ; go build gowebapp.go
 
 #Add GoWebApp in Supervisor / boot
-/etc/supervisor/conf.d/gowebapp.conf:
+/etc/init/gowebapp.conf:
   file:
     - managed
     - source: salt://gowebapp.conf
     - user: root
     - group: root
-    - mode: 644
+    - mode: 755
 
-Run gowebapp
+Run gowebapp:
   cmd.run:
-    - name: supervisorctl reread ; supervisorctl update
+    - name: start gowebapp
