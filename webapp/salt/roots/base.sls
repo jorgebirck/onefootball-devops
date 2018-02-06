@@ -29,3 +29,7 @@ download basic Go MVC Webapp:
     - user: root
     - group: root
     - mode: 644
+
+Build and run GoWebApp:
+  cmd.run:
+    - name: cd /go/src/github.com/josephspurrier/gowebapp ; go build gowebapp.go ; go run gowebapp.go
