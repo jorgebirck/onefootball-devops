@@ -26,4 +26,5 @@ $ cd onefootball-devops/webapp ; vagrant up
 
 
 Database access: mysql -uwebapp -pwebapp -h127.0.0.1 gowebapp
+
 GoWebApp access: http://localhost:8080
