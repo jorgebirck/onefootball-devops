@@ -22,3 +22,7 @@ Add webapp user and password:
     - user: root
     - group: root
     - mode: 644
+
+Restore SQL file:
+  cmd.run:
+    - name: mysql -f -uroot < mysql.sql
