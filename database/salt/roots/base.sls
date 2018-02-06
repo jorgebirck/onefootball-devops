@@ -13,3 +13,12 @@ Update bind address to make it reachable over the Virtualbox Network:
 Add webapp user and password:
   cmd.run:
     - name: mysql -uroot -e "grant all on webapp.* to webapp@'%' identified by 'webapp';"
+
+#Prepare gowebapp SQL for restore
+/root/mysql.sql:
+  file:                   
+    - managed
+    - source: salt://mysql.sql
+    - user: root
+    - group: root
+    - mode: 644
