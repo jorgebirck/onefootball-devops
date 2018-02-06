@@ -1,9 +1,10 @@
 # Instructions:
 
-## Install Vagrant: https://www.vagrantup.com/docs/installation/
+## Install Vagrant: 
+https://www.vagrantup.com/docs/installation/
 
 
-## Install the Salt Vagrant plugin from the commandline: 
+## Install the Salt Vagrant plugin:  
 ~~~
 $ vagrant plugin install vagrant-salt
 ~~~
