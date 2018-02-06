@@ -21,6 +21,7 @@ download basic Go MVC Webapp:
   cmd.run:
     - name: export PATH="$PATH:/usr/local/go/bin" ; go get github.com/josephspurrier/gowebapp
 
+#Configure MySQL as Backend for the webapp
 /root/go/src/github.com/josephspurrier/gowebapp/config/config.json:
   file:                   
     - managed
