@@ -24,7 +24,16 @@ $ cd onefootball-devops/webapp ; vagrant up
 ~~~
 
 
+## Provision the Monitor:
+Clone this repo and run: 
+~~~
+$ cd onefootball-devops/monitor ; vagrant up
+~~~
 
-Database access: mysql -uwebapp -pwebapp -h127.0.0.1 gowebapp
 
-GoWebApp access: http://localhost:8080
+## URLs
+Database: mysql -uwebapp -pwebapp -h127.0.0.1 gowebapp
+
+GoWebApp: http://localhost:8080
+
+Monitor / Uchiwa: http://localhost:3000 
