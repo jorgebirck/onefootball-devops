@@ -56,4 +56,4 @@ Use Ruby2:
 
 Install Sensu plugins:
   cmd.run:
-    - name: gem install sensu-plugins-memory-checks 
+    - name: gem install sensu-plugins-memory-checks ; gem install sensu-plugins-load-checks ; gem install sensu-plugins-disk-usage
