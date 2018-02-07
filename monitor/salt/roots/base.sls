@@ -39,11 +39,21 @@ uchiwa:
 
 Update Sensu config files:
   cmd.run:
-    - name: wget -O /etc/sensu/config.json http://sensuapp.org/docs/1.2/files/config.json ; wget -O /etc/sensu/conf.d/check_disk.json http://sensuapp.org/docs/1.2/files/check_disk.json ; wget -O /etc/sensu/conf.d/default_handler.json http://sensuapp.org/docs/1.2/files/default_handler.json ; wget -O /etc/sensu/conf.d/client.json http://sensuapp.org/docs/1.2/files/client.json
+    - name: wget -O /etc/sensu/config.json http://sensuapp.org/docs/1.2/files/config.json ; wget -O /etc/sensu/conf.d/check_disk.json http://sensuapp.org/docs/1.2/files/check_disk.json ; wget -O /etc/sensu/conf.d/default_handler.json http://sensuapp.org/docs/1.2/files/default_handler.json 
+
+#Update client configuration:
+/etc/sensu/conf.d/client.json:
+  file:                   
+    - managed
+    - source: salt://client.json
+    - user: root
+    - group: root
+    - mode: 644
 
 Run Sensu services:
   cmd.run:
     - name: /etc/init.d/sensu-server restart ; service sensu-client restart ; service sensu-api restart ; service uchiwa restart
+
 
 #Update Uchiwa config with our 3 hosts:
 /etc/sensu/uchiwa.json:

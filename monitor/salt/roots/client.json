@@ -1,0 +1,11 @@
+{
+"client": {
+  "name": "monitor",
+  "address": "192.168.51.3",
+  "environment": "production",
+  "subscriptions": [
+    "web",
+    "ubuntu"
+  ]
+ }
+}
