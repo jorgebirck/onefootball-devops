@@ -1,0 +1,11 @@
+{
+"client": {
+  "name": "webapp",
+  "address": "192.168.51.2",
+  "environment": "production",
+  "subscriptions": [
+    "web",
+    "ubuntu"
+  ]
+ }
+}
