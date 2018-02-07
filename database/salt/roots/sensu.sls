@@ -1,8 +1,6 @@
-install ruby2:
+install pre-requisites:
   pkg.installed:
     - names: 
-      - ruby2.0-dev
-      - ruby2.0
       - libtool
       - autoconf
 
@@ -48,10 +46,14 @@ Apply changes:
   cmd.run:
     - name: /etc/init.d/sensu-client restart
 
+Install Ruby2.2:
+  cmd.run:
+    - name: apt-add-repository -y ppa:brightbox/ruby-ng ; apt-get update ; apt-get install ruby2.2 ruby2.2-dev
+
 Use Ruby2:
   cmd.run:
-    - name: update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby2.0 0 ; update-alternatives --install /usr/bin/gem gem /usr/bin/gem2.0 0
+    - name: update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby2.2 0 ; update-alternatives --install /usr/bin/gem gem /usr/bin/gem2.2 0
 
 Install Sensu plugins:
   cmd.run:
-    - name: gem install sensu-plugin 
+    - name: gem install sensu-plugins-memory-checks 
