@@ -1,10 +1,16 @@
-#mysql:
-#  pkg:
-#    - installed
-#    - names:
-#      - mysql-server-5.6
-#  service:
-#    - running
+Add Uchiwa pubkey:
+  cmd.run:
+    - name: wget -q https://sensu.global.ssl.fastly.net/apt/pubkey.gpg -O- | sudo apt-key add -
+
+Add Uchiwa repository:
+  cmd.run:
+    - name: echo "deb     https://sensu.global.ssl.fastly.net/apt $CODENAME main" | sudo tee /etc/apt/sources.list.d/sensu.list
+
+uchiwa:
+  pkg:
+    - installed
+  service:
+    - running
 
 #Update bind address to make it reachable over the Virtualbox Network:
 #  cmd.run:
@@ -18,11 +24,3 @@
 #    - user: root
 #    - group: root
 #    - mode: 644
-
-#Restore SQL file:
-#  cmd.run:
-#    - name: mysql -f -uroot < mysql.sql
-
-#Add webapp user and password:
-#  cmd.run:
-#    - name: mysql -uroot -e "grant all on gowebapp.* to webapp@'%' identified by 'webapp';"
