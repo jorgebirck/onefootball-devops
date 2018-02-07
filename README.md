@@ -18,16 +18,16 @@ $ cd onefootball-devops/database ; vagrant up
 
 
 ## Provision the Webapp:
-Clone this repo and run: (you should have database VM running first)
+Run: (you should have database VM running first)
 ~~~
-$ cd onefootball-devops/webapp ; vagrant up 
+$ cd ../webapp/ ; vagrant up 
 ~~~
 
 
 ## Provision the Monitor:
-Clone this repo and run: 
+Run: 
 ~~~
-$ cd onefootball-devops/monitor ; vagrant up
+$ cd ../monitor/ ; vagrant up
 ~~~
 
 
