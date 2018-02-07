@@ -50,6 +50,15 @@ Update Sensu config files:
     - group: root
     - mode: 644
 
+#Update check_memory configuration:
+/etc/sensu/conf.d/check_memory.json:
+  file:
+    - managed
+    - source: salt://check_memory.json
+    - user: root
+    - group: root
+    - mode: 644
+
 Run Sensu services:
   cmd.run:
     - name: /etc/init.d/sensu-server restart ; service sensu-client restart ; service sensu-api restart ; service uchiwa restart
@@ -67,4 +76,5 @@ Run Sensu services:
 Restart Uchiwa service:
   cmd.run:
     - name: /etc/init.d/uchiwa restart
+
 

@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "cpu_usage": {
+      "command": "check-memory.rb -w 50 -c 15",
+      "interval": 60,
+      "subscribers": [ "test" ]
+    }
+  }
+}
