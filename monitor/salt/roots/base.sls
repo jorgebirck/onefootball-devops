@@ -59,6 +59,15 @@ Update Sensu config files:
     - group: root
     - mode: 644
 
+#Update check_load configuration:
+/etc/sensu/conf.d/check_load.json:
+  file:
+    - managed
+    - source: salt://check_load.json
+    - user: root
+    - group: root
+    - mode: 644
+
 Run Sensu services:
   cmd.run:
     - name: /etc/init.d/sensu-server restart ; service sensu-client restart ; service sensu-api restart ; service uchiwa restart

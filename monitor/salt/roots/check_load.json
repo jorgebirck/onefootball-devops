@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "cpu": {
+      "command": "check-load.rb",
+      "interval": 60,
+      "subscribers": [ "test" ]
+    }
+  }
+}
