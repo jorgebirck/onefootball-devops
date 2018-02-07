@@ -4,7 +4,7 @@ Add Uchiwa pubkey:
 
 Add Uchiwa repository:
   cmd.run:
-    - name: echo "deb     https://sensu.global.ssl.fastly.net/apt $CODENAME main" | sudo tee /etc/apt/sources.list.d/sensu.list
+    - name: echo "deb https://sensu.global.ssl.fastly.net/apt trusty main" | sudo tee /etc/apt/sources.list.d/sensu.list
 
 uchiwa:
   pkg:
