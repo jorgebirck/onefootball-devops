@@ -48,7 +48,7 @@ Apply changes:
 
 Install Ruby2.2:
   cmd.run:
-    - name: apt-add-repository -y ppa:brightbox/ruby-ng ; apt-get update ; apt-get install ruby2.2 ruby2.2-dev
+    - name: apt-add-repository -y ppa:brightbox/ruby-ng ; apt-get update ; apt-get install -y ruby2.2 ruby2.2-dev
 
 Use Ruby2:
   cmd.run:
