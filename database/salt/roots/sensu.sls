@@ -1,3 +1,11 @@
+install ruby2:
+  pkg.installed:
+    - names: 
+      - ruby2.0-dev
+      - ruby2.0
+      - libtool
+      - autoconf
+
 Add Sensu repository:
   cmd.run:
     - name: wget -q https://sensu.global.ssl.fastly.net/apt/pubkey.gpg -O- | sudo apt-key add - ; echo "deb https://sensu.global.ssl.fastly.net/apt trusty main" | sudo tee /etc/apt/sources.list.d/sensu.list ; sudo apt-get update
@@ -38,4 +46,12 @@ sensu:
 
 Apply changes:
   cmd.run:
-    - name: /etc/init.d/sensu-client restart 
+    - name: /etc/init.d/sensu-client restart
+
+Use Ruby2:
+  cmd.run:
+    - name: update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby2.0 0 ; update-alternatives --install /usr/bin/gem gem /usr/bin/gem2.0 0
+
+Install Sensu plugins:
+  cmd.run:
+    - name: gem install sensu-plugin 
