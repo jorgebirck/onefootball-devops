@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "mysql": {
+      "command": "check-process.rb -p mysqld",
+      "interval": 60,
+      "subscribers": [ "test" ]
+    }
+  }
+}
