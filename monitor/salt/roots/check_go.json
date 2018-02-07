@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "mysql": {
+      "command": "check-process.rb -p go",
+      "interval": 60,
+      "subscribers": [ "webapp" ]
+    }
+  }
+}
