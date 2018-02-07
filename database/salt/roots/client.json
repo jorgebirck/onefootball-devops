@@ -1,0 +1,11 @@
+{
+"client": {
+  "name": "database",
+  "address": "192.168.51.1",
+  "environment": "production",
+  "subscriptions": [
+    "web",
+    "ubuntu"
+  ]
+ }
+}
