@@ -45,16 +45,16 @@ Run Sensu services:
   cmd.run:
     - name: /etc/init.d/sensu-server restart ; service sensu-client restart ; service sensu-api restart ; service uchiwa restart
 
+#Update Uchiwa config with our 3 hosts:
+/etc/sensu/uchiwa.json:
+  file:
+    - managed
+    - source: salt://uchiwa.json
+    - user: root
+    - group: root
+    - mode: 644
 
-#Update bind address to make it reachable over the Virtualbox Network:
-#  cmd.run:
-#    - name: sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf ; service mysql restart 
+Restart Uchiwa service:
+  cmd.run:
+    - name: /etc/init.d/uchiwa restart
 
-#Prepare gowebapp SQL for restore
-#/root/mysql.sql:
-#  file:                   
-#    - managed
-#    - source: salt://mysql.sql
-#    - user: root
-#    - group: root
-#    - mode: 644
