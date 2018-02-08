@@ -1,20 +1,15 @@
 # Some notes first:
 
 - I was not worried about security in this challenge, so I used weak passwords and no whitelist for IPs ;
-
 - I had to increase Vagrant VM memory for MySQL-5.6 ;
 
 
 Improvements that can be done:
 
 - The GoLang package (.deb) was installed throught a static URL, GoWebApp doesn't run with the official Ubuntu 14.04 package. Would be better to use a repository and keep it up to date (secure) ;
-
 - Find a better way to set env variables in Saltstack ;
-
 - Find a better way to start (some)services in Saltstack ;
-
 - Use more local files in Saltstack instead of download with wget (to avoid 404) ;
-
 - Add .vagrant dir to gitignore ;
 
 
