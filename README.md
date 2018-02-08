@@ -1,4 +1,4 @@
-# Some notes first:
+# Some notes:
 
 - I was not worried about security in this challenge, so I used weak passwords and no whitelist for IPs ;
 - I had to increase Vagrant VM memory for MySQL-5.6 ;
