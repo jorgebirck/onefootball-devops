@@ -41,5 +41,7 @@ Monitor / Uchiwa: http://localhost:3000
 
 ## IPs - hosts 
 192.168.51.1 - database
+
 192.168.51.2 - webapp
+
 192.168.51.3 - monitor
