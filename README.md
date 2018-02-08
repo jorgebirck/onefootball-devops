@@ -46,17 +46,13 @@ $ cd ../monitor/ ; vagrant up
 ~~~
 
 
-## URLs
-Database: mysql -uwebapp -pwebapp -h127.0.0.1 gowebapp
+# URLs / IPs
+- Database: mysql -uwebapp -pwebapp -h127.0.0.1 gowebapp
+- GoWebApp: http://localhost:8080
+- Monitor / Uchiwa: http://localhost:3000
 
-GoWebApp: http://localhost:8080
+IPs - hosts 
 
-Monitor / Uchiwa: http://localhost:3000
-
-
-## IPs - hosts 
-192.168.51.1 - database
-
-192.168.51.2 - webapp
-
-192.168.51.3 - monitor
+- 192.168.51.1 - database
+- 192.168.51.2 - webapp
+- 192.168.51.3 - monitor
