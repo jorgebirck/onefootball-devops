@@ -1,1 +1,0 @@
-{"virtualbox":{"/srv/salt/":{"guestpath":"/srv/salt","hostpath":"/Users/jorge/Code/onefootball-devops/webapp/salt/roots","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/jorge/Code/onefootball-devops/webapp","disabled":false,"__vagrantfile":true}}}
